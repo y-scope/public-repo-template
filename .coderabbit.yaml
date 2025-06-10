@@ -2,7 +2,7 @@
 language: "en-CA"
 reviews:
   path_instructions:
-    - path: "**/*.{cpp,hpp,java,js,jsx,tpp,ts,tsx}"
+    - path: "**/*.{cpp,h,hpp,java,js,jsx,tpp,ts,tsx}"
       instructions: >-
         - Prefer `false == <expression>` rather than `!<expression>`.
   profile: "assertive"
