@@ -1,32 +1,16 @@
 <!-- markdownlint-disable MD012 -->
 
-<!--
-Set the PR title to a meaningful commit message that:
-
-* is in imperative form.
-* follows the Conventional Commits specification (https://www.conventionalcommits.org).
-  * See https://github.com/commitizen/conventional-commit-types/blob/master/index.json for possible
-    types.
-
-Example:
-
-fix: Don't add implicit wildcards ('*') at the beginning and the end of a query (fixes #390).
--->
-
 # Description
 
 <!-- Describe what this request will change/fix and provide any details necessary for reviewers. -->
 
 
 
-# Checklist
+# Breaking changes
 
-<!-- Ensure each item below is satisfied and indicate so by inserting an `x` within each `[ ]`. -->
+<!-- Indicate any changes that break behavior/compatibility with the last release. Delete this
+section if there are no breaking changes. -->
 
-* [ ] The PR satisfies the [contribution guidelines][yscope-contrib-guidelines].
-* [ ] This is a breaking change and that has been indicated in the PR title, OR this isn't a
-  breaking change.
-* [ ] Necessary docs have been updated, OR no docs need to be updated.
 
 # Validation performed
 
@@ -34,4 +18,22 @@ fix: Don't add implicit wildcards ('*') at the beginning and the end of a query 
 
 
 
+# Checklist
+
+<!-- Add an `x` within each `[ ]` to indicate which requirements have been satisfied. If a
+requirement hasn't been satisfied, please indicate why in a comment. -->
+
+* [ ] The PR satisfies the [contribution guidelines][yscope-contrib-guidelines].
+* [ ] Necessary docs have been updated, OR no docs need to be updated.
+* [ ] The [description](#description) has been filled out.
+* [ ] The [breaking changes](#breaking-changes) section has been filled out OR deleted.
+* [ ] The [validation performed](#validation-performed) section has been filled out.
+* The PR title:
+  * [ ] follows the [Conventional Commits][conventional-commits] specification;
+  * [ ] uses one of the [commit types][commit-types] from here;
+  * [ ] is in imperative form (e.g., "Add new node types."); AND
+  * [ ] indicates any GitHub feature requests or issues that the PR resolves.
+
+[conventional-commits]: https://www.conventionalcommits.org
+[commit-types]: https://github.com/commitizen/conventional-commit-types/blob/master/index.json
 [yscope-contrib-guidelines]: https://docs.yscope.com/dev-guide/contrib-guides-overview.html
