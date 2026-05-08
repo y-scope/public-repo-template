@@ -6,13 +6,6 @@
 
 
 
-<!-- If this PR was assisted by AI, fill in the details below. Write "None" if no AI was used. -->
-
-Assisted by:
-
-* AI agent: None
-* AI model: None
-
 # Breaking changes
 
 <!-- Indicate any changes that break behavior/compatibility with the last release. Write "None" if
