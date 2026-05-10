@@ -1,0 +1,30 @@
+name: "pr-template-checks"
+
+on:
+  pull_request_target:
+    # NOTE: pull_request_target runs in the context of the base repository.
+    # Do not check out, build, or execute code from the pull request in this workflow.
+    types: ["edited", "opened", "reopened"]
+    branches: ["main"]
+
+permissions: {}
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number }}"
+
+  # Cancel in-progress jobs for efficiency
+  cancel-in-progress: true
+
+jobs:
+  check-pr-template:
+    permissions:
+      # For actions/checkout
+      contents: "read"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd"  # v6.0.2
+
+      - uses: "astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b"  # v8.1.0
+
+      - run: "uv run .github/scripts/check_pr_template.py"
